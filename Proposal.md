@@ -11,7 +11,7 @@ Autori vytvorili dva prístupy, plytkú konvolučnú neurónovú sieť, natréno
 boli adaptované z inej neurónovej sieti natrénovanej na klasifikáciu. Táto práca bola prvá v oblasti predikcie vizuálnej pozornosti, ktorá na riešenie použila "end-to-end" konvolučnú neurónovú sieť. 
 # 3. Dataset
 Vstupný dataset obsahuje 4000 obrázkov z dvadsiatich rôznych kategórií, ako napríklad Object, Pattern, Social, Art atď.
-Obrázky sú rozdelené do dvoch rovnako veľkých skupín po 2000 obrázkov - vstupné a výstupné. Veľkosť jednotlivých obrázkov je 1920 x 1080px. Taktiež obsahuje body, na ktoré sa ľudia pri jetnotlivých obrázkoch pozerali.
+Obrázky sú rozdelené do dvoch rovnako veľkých skupín po 2000 obrázkov - vstupné a výstupné. Veľkosť jednotlivých obrázkov je 1920 x 1080px. Taktiež obsahuje body, na ktoré sa ľudia pri jetnotlivých obrázkoch pozerali. Tieto dáta boli získané pozorovaním očí testovaných osôb počas premietania obrázkov. Každá osoba mala 5 sekúnd na prezretie jedného obrázku.
 
 ## Vstupný obrázok:
 
