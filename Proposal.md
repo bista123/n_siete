@@ -10,6 +10,9 @@ V našej práci chceme vytvoriť a natrénovať model, ktorý bude predikovať �
 Autori vytvorili dva prístupy, plytkú konvolučnú neurónovú sieť, natrénovanú od základu a zložitejsí model, ktorého prvé tri vrstvy
 boli adaptované z inej neurónovej sieti natrénovanej na klasifikáciu. Táto práca bola prvá v oblasti predikcie vizuálnej pozornosti, ktorá na riešenie použila "end-to-end" konvolučnú neurónovú sieť. 
 # 3. Dataset
+Vstupný dataset obsahuje 4000 obrázkov z dvadsiatich rôznych kategórií, ako napríklad Object, Pattern, Social, Art atď.
+Obrázky sú rozdelené do dvoch rovnako veľkých skupín po 2000 obrázkov - vstupné a výstupné. Veľkosť jednotlivých obrázkov je 1920 x 1080px.
+
 ## Vstupný obrázok:
 
 ![jazdec](./images/006.jpg)
@@ -19,4 +22,4 @@ boli adaptované z inej neurónovej sieti natrénovanej na klasifikáciu. Táto 
 
 
 # 4. Návrh riešenia
-
+Náš model sa bude skladať z viacvrstvovej konvolučnej neurónovej siete. Túto sieť budeme trénovať na vopred opísanom datasete a chceme aby predikovala miesta, kde sa budú ľudia najčastejšie pozerať.
