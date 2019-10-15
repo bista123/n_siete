@@ -10,6 +10,13 @@ V našej práci chceme vytvoriť a natrénovať model, ktorý bude predikovať �
 Autori vytvorili dva prístupy, plytkú konvolučnú neurónovú sieť, natrénovanú od základu a zložitejsí model, ktorého prvé tri vrstvy
 boli adaptované z inej neurónovej sieti natrénovanej na klasifikáciu. Táto práca bola prvá v oblasti predikcie vizuálnej pozornosti, ktorá na riešenie použila "end-to-end" konvolučnú neurónovú sieť. 
 # 3. Dataset
+## Vstupný obrázok:
+
+![jazdec](./images/006.jpg)
+## Výstupná saliency mapa:
+
+![jazdecsaliency](./images/006_SaliencyMap.jpg "Input")
+
 
 # 4. Návrh riešenia
 
