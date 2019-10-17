@@ -1,14 +1,15 @@
 # 1. Motivácia
-Vizuálne vnímanie človeka je zahlcované množstvom informácii z nášho okolia, ktoré musí náš nervový systém neustále spracovávať. 
-Kapacita nervového systému nie je dostatočná na spracovanie všetkých prichádzajúcich stimulov, 
-preto vizuálne vnímanie človeka vyberá na ďalšie spracovanie iba tie najdôležitejšie podnety. 
-Sledovanie vizuálnej pozornosti človeka je dôležitý pre veľké množstvo aplikačných oblastí, 
-kde má modelovanie vizuálnej pozornosti nezameniteľný význam. Pre aplikovanú informatiku sú najvýznamnejšie aplikácie takýchto modelov v robotike, pri predikcii správania človeka, alebo používateľa informačných systémov a v autonómnej doprave. 
-V našej práci chceme vytvoriť a natrénovať model, ktorý bude predikovať časti obrázku, na ktoré sa bude používateľ najčastejšie pozerať. 
+Počasie patrí medzi najvýraznejšie faktory, ktoré vplývajú na ľudksý život na Zemi. Človek sa odjakživa snažil čo najpresnejšie predpovedať počasie práve kvôli jeho veľkému vplyvu na život každého jedinca. Od predpovedi počasia sú v súčasnosti takisto závislé mnohé odvetvia, či už poľnohospodárstvo, doprava(letecká, lodná), výroba elektrickej energie (veterné elektrárne a solárne panely) a mnohé ďalšie. Z týchto dôvodov je čo najpresnejšia predpoveď počasia veľmi dôležitá.
+
+
+V posledných rokoch sa začala na predpoveď počasia využívať nová technika - predpoveď pomocou neurónových sietí. Pri predpovedi počasia ide prakticky o predikciu časových radov. Kvôli premenlivosti sa počasia sa často na tieto problémy využívajú rekurentné neurónové siete.
+
+
+V našom projekte sme sa rohodli zaoberať predikciou časových radov a teda predpoveďou počasia. Našim cieľom je využiť rekurentné neurónové siete.
+
 # 2. Súvisiaca práca
-*Shallow and Deep Convolutional Networks for Saliency Prediction 2016* Táto práca využíva na riešenie problému konvolučnú neurónovú sieť.
-Autori vytvorili dva prístupy, plytkú konvolučnú neurónovú sieť, natrénovanú od základu a zložitejsí model, ktorého prvé tri vrstvy
-boli adaptované z inej neurónovej sieti natrénovanej na klasifikáciu. Táto práca bola prvá v oblasti predikcie vizuálnej pozornosti, ktorá na riešenie použila "end-to-end" konvolučnú neurónovú sieť. 
+V súčasnoti už existujú práce, ktoré sa zaoberajú podobnou problematikou akej sa budeme venovať aj my.
+
 # 3. Dataset
 Vstupný dataset obsahuje 4000 obrázkov z dvadsiatich rôznych kategórií, ako napríklad Object, Pattern, Social, Art atď.
 Obrázky sú rozdelené do dvoch rovnako veľkých skupín po 2000 obrázkov - vstupné a výstupné. Veľkosť jednotlivých obrázkov je 1920 x 1080px. Taktiež obsahuje body, na ktoré sa ľudia pri jetnotlivých obrázkoch pozerali. Tieto dáta boli získané pozorovaním očí testovaných osôb počas premietania obrázkov. Každá osoba mala 5 sekúnd na prezretie jedného obrázku.
