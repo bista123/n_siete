@@ -8,7 +8,16 @@ V posledných rokoch sa začala na predpoveď počasia využívať nová technik
 V našom projekte sme sa rohodli zaoberať predikciou časových radov a teda predpoveďou počasia. Našim cieľom je využiť rekurentné neurónové siete.
 
 # 2. Súvisiaca práca
-V súčasnoti už existujú práce, ktoré sa zaoberajú podobnou problematikou akej sa budeme venovať aj my.
+- *Sequence to Sequence Weather Forecasting with Long Short-Term Memory Recurrent Neural Networks 2016*
+
+
+V tejto práci sa autori zaoberajú predikciou počasia pre 9 miest v Maroku. Snažia sa o predpoveď teploty, vlhkosti a rýchlosti vetra na dva časové intervaly - 24 a 72 hodín. Používajú pri tom LSTM neurónové siete, ktoré patria do skupiny rekurentných neurónových sietí.
+
+Na natrénovanie modelu neorónovej siete použili približne 15 rokov meteorologických dát, ktoré boli zaznamenané v časovom intervale jednej hodiny. Model dosiahol dobrú úspešnnosť predpovedí, porovnateľnú s úspešnosťou metód, ktoré sa na predpoveď počasia používajú v dnešnej dobe.
+
+Ďalšie práce v tejto oblasti:
+- *An ensemble of neural networks for weather forecasting 2004*
+- *An Efficient Weather Forecasting System using Artificial Neural Network 2010*
 
 # 3. Dataset
 Vstupný dataset obsahuje 4000 obrázkov z dvadsiatich rôznych kategórií, ako napríklad Object, Pattern, Social, Art atď.
