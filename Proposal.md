@@ -23,8 +23,7 @@ Na natrénovanie modelu neorónovej siete použili približne 15 rokov meteorolo
 Náš dataset, obsahuje milióny dát. Konkrétne ale chceme pracovať zo začiatku s teplotou. Tento dataset sme získali z Institut für Geowissenschaften, inštitút je na Rheinischen Friedrich-Wilhelms-Universität Bonn, čo je univarzita v nemeckom Bonn-e. 
 
 ## Vstupný obrázok:
-
-![weather](./images/Screenshot from 2019-10-18 14-46-26.png)
+![weather](./images/pocasiedata.png)
 
 
 # 4. Návrh riešenia
