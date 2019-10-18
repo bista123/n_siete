@@ -24,7 +24,7 @@ Náš dataset, obsahuje milióny dát. Konkrétne ale chceme pracovať zo začia
 
 ## Vstupný obrázok:
 
-![jazdec](./images/006.jpg)
+![weather](./images/Screenshot from 2019-10-18 14-46-26.png)
 
 
 # 4. Návrh riešenia
