@@ -13,23 +13,19 @@ V našom projekte sme sa rohodli zaoberať predikciou časových radov a teda pr
 
 V tejto práci sa autori zaoberajú predikciou počasia pre 9 miest v Maroku. Snažia sa o predpoveď teploty, vlhkosti a rýchlosti vetra na dva časové intervaly - 24 a 72 hodín. Používajú pri tom LSTM neurónové siete, ktoré patria do skupiny rekurentných neurónových sietí.
 
-Na natrénovanie modelu neorónovej siete použili približne 15 rokov meteorologických dát, ktoré boli zaznamenané v časovom intervale jednej hodiny. Model dosiahol dobrú úspešnnosť predpovedí, porovnateľnú s úspešnosťou metód, ktoré sa na predpoveď počasia používajú v dnešnej dobe.
+Na natrénovanie modelu neorónovej siete použili približne 15 rokov meteorologických dát, ktoré boli zaznamenané v časovom intervale jednej hodiny. Model dosiahol dobrú úspešnnosť predpovedí, porovnateľnú s úspešnosťou metód, ktoré sa na predpoveď počasia používajú v dnešnej dobe. Hodnoty sú v minutových intervaloch a zaokrúhlené na tri desatinné miesta.
 
 Ďalšie práce v tejto oblasti:
 - *An ensemble of neural networks for weather forecasting 2004*
 - *An Efficient Weather Forecasting System using Artificial Neural Network 2010*
 
 # 3. Dataset
-Vstupný dataset obsahuje 4000 obrázkov z dvadsiatich rôznych kategórií, ako napríklad Object, Pattern, Social, Art atď.
-Obrázky sú rozdelené do dvoch rovnako veľkých skupín po 2000 obrázkov - vstupné a výstupné. Veľkosť jednotlivých obrázkov je 1920 x 1080px. Taktiež obsahuje body, na ktoré sa ľudia pri jetnotlivých obrázkoch pozerali. Tieto dáta boli získané pozorovaním očí testovaných osôb počas premietania obrázkov. Každá osoba mala 5 sekúnd na prezretie jedného obrázku.
+Náš dataset, obsahuje milióny dát. Konkrétne ale chceme pracovať zo začiatku s teplotou. Tento dataset sme získali z Institut für Geowissenschaften, inštitút je na Rheinischen Friedrich-Wilhelms-Universität Bonn, čo je univarzita v nemeckom Bonn-e. 
 
 ## Vstupný obrázok:
 
 ![jazdec](./images/006.jpg)
-## Výstupná saliency mapa:
-
-![jazdecsaliency](./images/006_SaliencyMap.jpg "Input")
 
 
 # 4. Návrh riešenia
-Náš model sa bude skladať z viacvrstvovej konvolučnej neurónovej siete. Túto sieť budeme trénovať na vopred opísanom datasete a chceme aby predikovala miesta, kde sa budú ľudia najčastejšie pozerať.
+Náš model sa bude skladať z viacvrstvovej rekurentnej neurónovej siete. Túto sieť budeme trénovať na vopred opísanom datasete a chceme aby predikovala teplotu a iné meteorologické dáta na pár dní dopredu.
