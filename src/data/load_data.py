@@ -5,23 +5,44 @@ import numpy as np
 
 def load_data():
     path = os.getcwd()
-    return pd.read_csv(path + '/../../data/raw/jenagermany.csv')
+    if path == '/content':
+        data_csv = pd.read_csv('/content/drive/My Drive/weather_forecast/data/processed/temperatures.csv')
+    else:
+        data_csv = pd.read_csv(path + '/../../data/processed/temperatures.csv')
+
+    train_split = int(len(data_csv) * 0.8)
+    data = data_csv[['LA-HLY-TEMP-NORMAL', 'PH-HLY-TEMP-NORMAL', 'SF-HLY-TEMP-NORMAL']]
+    data.index = data_csv['DATE']
+
+    data_mean = data[:train_split].mean(axis=0)
+    data_std = data[:train_split].std(axis=0)
+    data = np.array((data - data_mean) / data_std)
+
+    return data, train_split
 
 
-def univariate_data(dataset, start_index, end_index, history_size, target_size):
+def prepare_data(dataset, target, start, end, look_back, prediction, step):
     data = []
     labels = []
 
-    start_index = start_index + history_size
-    if end_index is None:
-        end_index = len(dataset) - target_size
+    start_index = start + look_back
+    if end is None:
+        end = len(dataset) - prediction
 
-    for i in range(start_index, end_index):
-        indices = range(i-history_size, i)
+    for i in range(start_index, end):
+        indices = range(i - look_back, i, step)
+        data.append(dataset[indices])
 
-        data.append(np.reshape(dataset[indices], (history_size, 1)))
-        labels.append(dataset[i+target_size])
+        labels.append(target[i:i + prediction])
     return np.array(data), np.array(labels)
+
+
+def prepare_dataset(dataset, train_split, look_back, num_predictions, step):
+    x_train, y_train = prepare_data(dataset, dataset[:, 1], 0, train_split, look_back, num_predictions, step)
+    x_val, y_val = prepare_data(dataset, dataset[:, 1], train_split, None, look_back, num_predictions, step)
+    # x_test, y_test = prepare_data(dataset, dataset[:, 1], test_split, None, look_back, num_predictions, step)
+
+    return x_train, y_train, x_val, y_val
 
 
 def create_time_steps(length):
