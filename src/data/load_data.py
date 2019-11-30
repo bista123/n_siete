@@ -6,12 +6,12 @@ import numpy as np
 def load_data():
     path = os.getcwd()
     if path == '/content':
-        data_csv = pd.read_csv('/content/drive/My Drive/weather_forecast/data/processed/temperatures.csv')
+        data_csv = pd.read_csv('/content/drive/My Drive/weather_forecast/data/processed/temperatures4.csv')
     else:
-        data_csv = pd.read_csv(path + '/../../data/processed/temperatures.csv')
+        data_csv = pd.read_csv(path + '/../../data/processed/temperatures4.csv')
 
     train_split = int(len(data_csv) * 0.8)
-    data = data_csv[['LA-HLY-TEMP-NORMAL', 'PH-HLY-TEMP-NORMAL', 'SF-HLY-TEMP-NORMAL']]
+    data = data_csv[['LA-HLY-TEMP-NORMAL', 'PH-HLY-TEMP-NORMAL', 'SF-HLY-TEMP-NORMAL', 'LV-HLY-TEMP-NORMAL']]
     data.index = data_csv['DATE']
 
     data_mean = data[:train_split].mean(axis=0)

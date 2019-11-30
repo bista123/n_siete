@@ -1,0 +1,4 @@
+15e
+80batch
+-64lstm
+-32 lstm
