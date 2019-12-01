@@ -40,7 +40,6 @@ def prepare_data(dataset, target, start, end, look_back, prediction, step):
 def prepare_dataset(dataset, train_split, look_back, num_predictions, step):
     x_train, y_train = prepare_data(dataset, dataset[:, 1], 0, train_split, look_back, num_predictions, step)
     x_val, y_val = prepare_data(dataset, dataset[:, 1], train_split, None, look_back, num_predictions, step)
-    # x_test, y_test = prepare_data(dataset, dataset[:, 1], test_split, None, look_back, num_predictions, step)
 
     return x_train, y_train, x_val, y_val
 
